@@ -1,0 +1,9 @@
+step 1 - install npm modules 
+command - npm install
+
+step 2 - run json server and install jason server
+commands - npm install json-server
+         - json-server --watch UserData.json
+
+step 3 - run code
+commands - ng serve -o
