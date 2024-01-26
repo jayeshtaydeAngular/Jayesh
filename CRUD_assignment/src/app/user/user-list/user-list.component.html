@@ -1,0 +1,34 @@
+<div class="container mt-4">
+    <h3 class="text-muted text-center">User Data</h3>
+    <table class="table mt-5 table-striped border rounded shadow" >
+        <thead >
+            <tr class="table-success">
+                <th>Action</th>
+                <th>Sr.No</th>
+                <th>First Name</th>
+                <th>Last name</th>
+                <th>Address</th>
+                <th>Email Id</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of UserListData ; let i= index">
+                <th >
+                <i class="fa-regular fa-pen-to-square edit-btn mx-1" style="color: #000000;" [routerLink]="['/user-upsert-edit', item.id]" [queryParams]="{'action':'EDIT'}"></i>&nbsp;
+                <i class="fa-regular fa-trash-can edit-btn mx-1" style="color: #000000;" (click)="delete(item.id,i)"></i>
+                </th>
+                <td>{{i+1}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+            </tr>
+        </tbody>
+       
+    </table>
+     <button class="btn btn-danger m-2" routerLink="/user-upsert">Add Another User</button>
+</div>
+
+

@@ -1,0 +1,58 @@
+<div class="container w-25 mt-4">
+  <h3 class="text-center text-muted p-2">User Details Form</h3>
+    <form class="p-3 shadow border bg-light rounded" [formGroup]="userForm">
+        <div class="mb-3">
+            <label for="userFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="userFirstName" placeholder="Enter first Name" formControlName="firstName">
+            <div *ngIf="userForm.get('firstName')?.touched || userForm.get('firstName')?.dirty">
+              <div class="invalid-feedback d-block" *ngIf="userForm.get('firstName')?.errors?.['required']">
+                  it is required field
+              </div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label for="userLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="userLastName" placeholder="Enter Last Name" formControlName="lastName">
+            <div *ngIf="userForm.get('lastName')?.touched || userForm.get('lastName')?.dirty">
+              <div class="invalid-feedback d-block" *ngIf="userForm.get('lastName')?.errors?.['required']">
+                  it is required field
+              </div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label for="userAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="userAddress" placeholder="Enter Address" formControlName="address">
+            <div *ngIf="userForm.get('address')?.touched || userForm.get('address')?.dirty">
+              <div class="invalid-feedback d-block" *ngIf="userForm.get('address')?.errors?.['required']">
+                  it is required field
+              </div>
+          </div>
+          </div>
+        <div class="mb-3">
+          <label for="userEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="userEmail" placeholder="Enter Email ID" formControlName="email">
+          <div *ngIf="userForm.get('email')?.touched || userForm.get('email')?.dirty">
+            <div class="invalid-feedback d-block" *ngIf="userForm.get('email')?.errors?.['required']">
+                it is required field
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="userForm.get('email')?.errors?.['pattern']">
+              Please Enter Proper Mail ID
+          </div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="userPhoneNumber" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="userPhoneNumber" placeholder="Enter 10-Digit Phone Number" formControlName="phone">
+          <div *ngIf="userForm.get('phone')?.touched || userForm.get('phone')?.dirty">
+            <div class="invalid-feedback d-block" *ngIf="userForm.get('phone')?.errors?.['required']">
+                it is required field
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="userForm.get('phone')?.errors?.['pattern']">
+              Please Enter 10-Digit Number 
+          </div>
+        </div>
+        </div>
+        <button type="button" *ngIf="!UserFormBtn" (click)="submit()" class="btn btn-primary" [disabled]="userForm.invalid">Submit</button>
+        <button type="button" *ngIf="UserFormBtn"  (click)="update()"  class="btn btn-primary m-2">Update Data</button>
+      </form>
+</div>

@@ -1,0 +1,44 @@
+{
+  "UserData": [
+    {
+      "firstName": "Rahul",
+      "lastName": "Dravid",
+      "address": "Indore",
+      "email": "Rahul@gmail.com",
+      "phone": "1111111111",
+      "id": "745e"
+    },
+    {
+      "firstName": "Rohit ",
+      "lastName": "Sharma",
+      "address": "Mumbai",
+      "email": "hitmman@gmail.com",
+      "phone": "2642642643",
+      "id": "86e9"
+    },
+    {
+      "firstName": "Ajinkya",
+      "lastName": "Rahane",
+      "address": "Mumbai",
+      "email": "AjikyaR@gmail.com",
+      "phone": "9191919191",
+      "id": "6f56"
+    },
+    {
+      "id": "cdcf",
+      "firstName": "Suresh",
+      "lastName": "Raina",
+      "address": " Muradnagar",
+      "email": "SRaina@gmail.com",
+      "phone": "5555555555"
+    },
+    {
+      "firstName": "Yuvraj",
+      "lastName": "Singh",
+      "address": "Delhi",
+      "email": "yuvi@gmail.com",
+      "phone": "3456234510",
+      "id": "1e3b"
+    }
+  ]
+}
